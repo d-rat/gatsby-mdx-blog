@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 function Blog() {
   const data = useStaticQuery(graphql`
     query {
-      allMdx {
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
             frontmatter {
