@@ -37,5 +37,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-plugin-postcss",
+      options: {
+        postCssPlugins: [require("tailwindcss")("./tailwind.config.js")],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: { tailwind: true },
+    },
   ],
 }

@@ -7,7 +7,11 @@ function BlogTemplate({ data: { mdx } }) {
   return (
     <div>
       <h1>{mdx.frontmatter.title}</h1>
-      <MDXProvider>
+      <MDXProvider
+        components={{
+          p: props => <p {...props} style={{ color: "red" }} />,
+        }}
+      >
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
     </div>
