@@ -20,16 +20,20 @@ function Blog() {
   `)
   return (
     <Layout>
-      <h1>Blog posts</h1>
       <div>
-        {data.allMdx.edges.map(post => (
-          <div>
-            <Link to={post.node.frontmatter.slug}>
-              <h1>{post.node.frontmatter.title}</h1>
-            </Link>
-            <p>{post.node.frontmatter.date}</p>
-          </div>
-        ))}
+        <h1 className="text-3xl font-bold text-center text-black">
+          Blog posts
+        </h1>
+        <div className="w-1/2 mx-auto ">
+          {data.allMdx.edges.map(post => (
+            <div className="py-6 border-b-2 border-purple-800">
+              <Link to={post.node.frontmatter.slug}>
+                <h1 className="text-xl">{post.node.frontmatter.title}</h1>
+              </Link>
+              <p className="text-xs">{post.node.frontmatter.date}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </Layout>
   )

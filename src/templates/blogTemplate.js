@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 function BlogTemplate({ data: { mdx } }) {
   return (
-    <div>
+    <div className="mx-auto max-w-customWidth">
       <h1>{mdx.frontmatter.title}</h1>
       <MDXProvider>
         <MDXRenderer>{mdx.body}</MDXRenderer>
