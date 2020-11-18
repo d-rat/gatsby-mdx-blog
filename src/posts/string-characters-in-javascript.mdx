@@ -1,0 +1,27 @@
+---
+slug: "/blog/string-characters-in-javascript"
+title: "Characters in a string in JavaScript"
+date: "2020-11-18"
+description: "how to find the number of occurrences of a character in a string using javascript."
+---
+
+# Characters in a string in JavaScript
+
+## suppose my string contains:
+
+    var mainStr = "str1,str2,str3,str4";
+
+I want to find the count of comma `,` character, which is 3.
+And the count of individual strings after the split along comma, which is 4.
+
+You can find such as:
+
+    console.log(("str1,str2,str3,str4".match(/,/g) || []).length);
+
+or you can also find like this
+
+    (mainStr.split(",").length - 1)
+
+for finding any arbitrary sting str you can do like this:
+
+    mainStr.split("str").length - 1)
