@@ -1,4 +1,5 @@
 import React from "react"
+import "../components/tailwind.css"
 
 function primaryHeading(props) {
   return <h1 className="text-4xl font-bold">{props.children}</h1>
@@ -14,7 +15,7 @@ function paragraph(props) {
 
 function codeBlock(props) {
   return (
-    <div className="px-4 py-4 bg-gray-900 rounded">
+    <div className="px-4 py-4 overflow-x-scroll bg-gray-900 rounded codeScroll">
       <h1 className="text-white ">{props.children}</h1>
     </div>
   )
